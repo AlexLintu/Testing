@@ -47,7 +47,15 @@ describe('User visits index', () => {
     });
 
     // Add the 'labels the pick up hour' test here
+    it('labels the pick up hour correctly', () => {
+      const label = 'pick up time:';
 
+      browser.url('/');
+      const HTML = browser.getHTML('body');
+      const parsedHTML = parseTextFromHTML(HTML, '#pickUp');
+
+      assert.include(parsedHTML, label);
+    });
 
     it('accepts the customer name', () => {
       const name = 'Hungry Person';
