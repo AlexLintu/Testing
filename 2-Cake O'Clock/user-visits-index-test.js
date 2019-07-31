@@ -22,10 +22,29 @@ describe('User visits index', () => {
     });
 
     // Add the 'outside of working hours' test here
+    it('does not provide options outside of working hours', () => {
+      const earlyHr = '7:00';
+      const lateHr = '13:00';
 
+      browser.url('/');
+      const HTML = browser.getHTML('body');
+      const parsedHTML = parseTextFromHTML(HTML, '#select-pickUp');
+
+      assert.notInclude(parsedHTML, earlyHr);
+      assert.notInclude(parsedHTML, lateHr);
+    });
 
     // Add the 'displays the selected hour' test here
+    it('displays the selected hour', () => {
+      const hour = '9:00';
 
+      browser.url('/');
+      browser.selectByVisibleText('#select-pickUp', hour);
+      browser.click('#submit-order');
+      browser.url('/');
+
+      assert.include(browser.getText('#pickUp'), hour);
+    });
 
     // Add the 'labels the pick up hour' test here
 
