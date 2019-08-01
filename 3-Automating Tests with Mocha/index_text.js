@@ -1,5 +1,7 @@
 const assert = require('assert');
+const fs = require('fs');
 
+// TEST 1
 // Testing Math object...
 describe('Math', () => {
   // ..with .min method
@@ -21,8 +23,6 @@ describe('+', () => {
 });
 
 // TEST 3
-const assert = require('assert');
-
 // Naive approach
 describe('.pop', () => {
   it('returns the last element in the array [naive]', () => {
@@ -42,5 +42,25 @@ describe('.pop', () => {
 
     // Verify
     assert.ok(popped === knightString);
+  });
+});
+
+// TEST 4
+describe('appendFileSync', () => {
+  it('writes a string to text file at given path name', () => {
+
+    // Setup
+    const path = './message.txt';
+    const str = 'Hello Node.js';
+
+    // Exercise: write to file
+    fs.appendFileSync(path, str);
+
+    // Verify: compare file contents to string
+    const contents = fs.readFileSync(path);
+    assert.ok(contents.toString() === str);
+
+    // Teardown: delete path
+    fs.unlinkSync(path);
   });
 });
