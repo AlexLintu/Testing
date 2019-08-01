@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 // Testing Math object...
 describe('Math', () => {
   // ..with .min method
@@ -10,3 +12,11 @@ describe('Math', () => {
     });
   });
 });
+
+// TEST 2
+describe('+', () => {
+  it('returns the sum of its arguments', () => {
+    assert.ok(3 + 4 === 8);
+  });
+});
+
