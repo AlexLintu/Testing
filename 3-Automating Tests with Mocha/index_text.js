@@ -16,7 +16,7 @@ describe('Math', () => {
 // TEST 2
 describe('+', () => {
   it('returns the sum of its arguments', () => {
-    assert.ok(3 + 4 === 8);
+    assert.ok(3 + 4 === 7);
   });
 });
 
