@@ -81,3 +81,11 @@ describe('+', () => {
     assert.deepEqual(sum, expected);
   });
 });
+
+// TEST 6 - notEqual
+describe('Numbers', () => {
+  it('1 does not equal 2', () => {
+    // Verify
+    assert.notEqual(1, 2);
+  });
+});
