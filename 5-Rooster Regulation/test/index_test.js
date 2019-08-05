@@ -14,3 +14,11 @@ describe('Rooster', () => {
     })
   })
 });
+
+
+describe('Rooster', () => {
+  describe('.timeAtDown', () => {
+    it('returns its argument as a string', () => {
+    })
+  })
+});
