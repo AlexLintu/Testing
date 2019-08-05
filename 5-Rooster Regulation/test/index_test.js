@@ -6,19 +6,26 @@ describe('Rooster', () => {
     it('returns a rooster call', () => {
       // 1. Setup
       const expected = 'cock-a-doodle-doo!';
-      // 2. Exercise - call Rooster.announceDawn and store result in variable
-      const result = Rooster.announceDawn();
-
-      // 3. Verify - use an assert method to compare actual and expected result
-      assert.equal(result, expected);
+      // 2. Exercise
+      const actual = Rooster.announceDawn();
+      // 3. Verify
+      assert.equal(actual, expected);
     })
   })
-});
 
-
-describe('Rooster', () => {
   describe('.timeAtDown', () => {
     it('returns its argument as a string', () => {
+      // 1. Setup
+      const inputNumber = 5;
+      const expected = '5';
+      // 2. Exercise
+      const actual = Rooster.timeAtDawn(inputNumber);
+      // 3. Verify
+      assert.equal(actual, expected);
+
+      it('throws an error if passed a number less than 0', () => {
+
+      })
     })
   })
 });
