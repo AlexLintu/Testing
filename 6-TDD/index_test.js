@@ -5,4 +5,4 @@ describe('Calculate', () => {
     it('returns the sum of an array of numbers', () => {
     })
   })
-}
+})
