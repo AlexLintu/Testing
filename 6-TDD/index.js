@@ -1,6 +1,7 @@
 const Calculate = {
   sum(inputArr) {
-    return 6;
+    const arrSum = inputArr.reduce((a, b) => a + b, 0);
+    return arrSum;
   }
 }
 
