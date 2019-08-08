@@ -1,7 +1,13 @@
 const Calculate = {
-  sum(inputArr) {
-    const arrSum = inputArr.reduce((a, b) => a + b, 0);
-    return arrSum;
+  sum(inputArray) {
+
+    if (inputArray.length === 0) {
+      return 0
+    }
+
+    return inputArray.reduce((sum, value) => {
+      return sum + value;
+    })
   }
 }
 
