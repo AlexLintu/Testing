@@ -1,6 +1,9 @@
 const Calculate = {
-  factorial() {
-    return 120;
+  factorial(inputNum) {
+    if (inputNum === 1) {
+      return 1;
+    }
+    return inputNum * this.factorial(inputNum - 1);
   }
 }
 
