@@ -10,5 +10,13 @@ describe('Calculate', () => {
       const result = Calculate.factorial(inputNum);
       assert.equal(result, expectedResult);
     });
+
+    it('tests if the output of !3 is equal to 6', () => {
+      const expectedResult = 6;
+      const inputNum = 3;
+
+      const result = Calculate.factorial(inputNum);
+      assert.equal(result, expectedResult);
+    });
   });
 });
